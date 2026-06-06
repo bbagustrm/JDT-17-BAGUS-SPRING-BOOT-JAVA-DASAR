@@ -4,18 +4,21 @@ import org.indivaragroup.jdt17.spring.dasar.dto.HelloDTO;
 import org.indivaragroup.jdt17.spring.dasar.dto.WorldDTO;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
+import org.springframework.context.annotation.Lazy;
 
 @Configuration
-public class BeanNameConfiguration {
+public class LazyConfiguration {
 
-    @Bean(name = "hello")
-    public HelloDTO hello(){
+    @Lazy
+    @Bean
+    public HelloDTO hello() {
+        System.out.println("hello dibuat");
         return new HelloDTO();
     }
 
-    @Bean(name = "world")
-    public HelloDTO world(){
-        return new HelloDTO();
+    @Bean
+    public WorldDTO world(){
+        System.out.println("world dibuat");
+        return new WorldDTO();
     }
 }

@@ -9,16 +9,13 @@ import org.springframework.context.annotation.DependsOn;
 @Configuration
 public class DependsOnConfiguration {
     @Bean
-    @DependsOn(value = {"bar"})
-    public HelloDTO foo(){
-        System.out.println("ini FOO");
+    @DependsOn(value = {"hello"})
+    public HelloDTO hello(){
         return new HelloDTO();
     }
 
     @Bean
-    public WorldDTO bar(){
-        System.out.println("ini BAR");
-
+    public WorldDTO world(){
         return new WorldDTO();
     }
 

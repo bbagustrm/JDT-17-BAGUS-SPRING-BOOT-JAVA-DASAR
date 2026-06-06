@@ -21,7 +21,7 @@
 		<developer/>
 	</developers>
 	<scm>
-		<connection/>
+		<connectionLifeCycleBean/>
 		<developerConnection/>
 		<tag/>
 		<url/>
